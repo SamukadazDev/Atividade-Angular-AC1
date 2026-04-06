@@ -1,0 +1,98 @@
+.detalhe-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.produto-detalhe {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.produto-detalhe h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.detalhe-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .detalhe-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.price {
+  font-size: 2rem;
+  color: #27ae60;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+.stock-status {
+  font-size: 1rem;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  border-radius: 4px;
+  text-align: center;
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.stock-status.out-of-stock {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.buy-btn {
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.buy-btn:hover:not(.disabled) {
+  background-color: #555;
+}
+
+.buy-btn.disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.not-found {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.not-found h2 {
+  color: #333;
+  font-size: 1.8rem;
+}

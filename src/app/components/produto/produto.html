@@ -1,0 +1,32 @@
+<div class="produtos-container">
+  <h1>Nossos Produtos</h1>
+  
+  @if (produtos.length === 0) {
+    <div class="no-products">
+      <p>Nenhum produto disponível no momento</p>
+    </div>
+  } @else {
+    <div class="produtos-grid">
+      @for (produto of produtos; track produto.id) {
+        <div class="product-card">
+          <h3>{{ produto.nome }}</h3>
+          <p class="price">R$ {{ produto.preco | number: '1.2-2' }}</p>
+          <p class="description">{{ produto.descricao }}</p>
+          <p class="stock-status" [class.out-of-stock]="!produto.emEstoque">
+            {{ produto.emEstoque ? 'Em Estoque' : 'Fora de Estoque' }}
+          </p>
+          
+          @if (produto.emEstoque) {
+            <button 
+              [routerLink]="['/produto-detalhe', produto.id]"
+              class="buy-btn">
+              Comprar
+            </button>
+          } @else {
+            <button class="buy-btn disabled">Indisponível</button>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>

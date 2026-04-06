@@ -1,0 +1,16 @@
+<div class="home-container">
+  <h1>Bem-vindo ao E-commerce</h1>
+  
+  <div class="banner-section">
+    <button (click)="toggleBanner()" class="toggle-btn">
+      {{ showBanner() ? 'Ocultar' : 'Mostrar' }} Banner
+    </button>
+    
+    @if (showBanner()) {
+      <div class="promotional-banner">
+        <h2>Promoção Especial!</h2>
+        <p>Aproveite descontos de até 50% em produtos selecionados.</p>
+      </div>
+    }
+  </div>
+</div>

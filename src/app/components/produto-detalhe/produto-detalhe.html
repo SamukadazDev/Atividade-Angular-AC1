@@ -1,0 +1,30 @@
+<div class="detalhe-container">
+  @if (produto) {
+    <div class="produto-detalhe">
+      <h1>{{ produto.nome }}</h1>
+      
+      <div class="detalhe-content">
+        <div class="info-section">
+          <p class="price">R$ {{ produto.preco | number: '1.2-2' }}</p>
+          
+          <p class="description">{{ produto.descricao }}</p>
+          
+          <p class="stock-status" [class.out-of-stock]="!produto.emEstoque">
+            {{ produto.emEstoque ? 'Em Estoque' : 'Fora de Estoque' }}
+          </p>
+          
+          @if (produto.emEstoque) {
+            <button (click)="comprar()" class="buy-btn">Comprar Agora</button>
+          } @else {
+            <button class="buy-btn disabled">Indisponível</button>
+          }
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="not-found">
+      <h2>Produto não encontrado</h2>
+      <p>Desculpe, o produto que você está procurando não existe.</p>
+    </div>
+  }
+</div>

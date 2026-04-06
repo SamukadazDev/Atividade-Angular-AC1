@@ -1,0 +1,49 @@
+.sobre-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 80vh;
+}
+
+.sobre-container h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  line-height: 1.8;
+}
+
+.about-content p {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.student-info {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border-left: 4px solid #333;
+  margin-top: 2rem;
+}
+
+.student-info h2 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.student-info p {
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+.student-info strong {
+  color: #333;
+}
